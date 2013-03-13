@@ -198,8 +198,253 @@ struct thrust_operations
         }
     };
 
+//Added 8
+    template< class Fac1 = double , class Fac2 = Fac1 , class Fac3 = Fac2 , class Fac4 = Fac3 ,
+            class Fac5 = Fac4 , class Fac6 = Fac5 , class Fac7 = Fac6 , class Fac8 = Fac7 >
+    struct scale_sum8
+    {
+        const Fac1 m_alpha1;
+        const Fac2 m_alpha2;
+        const Fac3 m_alpha3;
+        const Fac4 m_alpha4;
+        const Fac5 m_alpha5;
+        const Fac6 m_alpha6;
+        const Fac7 m_alpha7;
+	const Fac8 m_alpha8;
 
+        scale_sum8( const Fac1 alpha1 , const Fac2 alpha2 , const Fac3 alpha3 ,
+                const Fac4 alpha4 , const Fac5 alpha5 , const Fac6 alpha6 , const Fac7 alpha7 , const Fac8 alpha8 )
+        : m_alpha1( alpha1 ) , m_alpha2( alpha2 ) , m_alpha3( alpha3 ) ,
+          m_alpha4( alpha4 ) , m_alpha5( alpha5 ) , m_alpha6( alpha6 ) , m_alpha7( alpha7 ) , m_alpha8( alpha8 ) { }
 
+        template< class Tuple >
+        __host__ __device__
+        void operator()( Tuple t ) const
+        {
+            thrust::get<0>(t) = m_alpha1 * thrust::get<1>(t) +
+                    m_alpha2 * thrust::get<2>(t) +
+                    m_alpha3 * thrust::get<3>(t) +
+                    m_alpha4 * thrust::get<4>(t) +
+                    m_alpha5 * thrust::get<5>(t) +
+                    m_alpha6 * thrust::get<6>(t) +
+                    m_alpha7 * thrust::get<7>(t) +
+		    m_alpha8 * thrust::get<8>(t) ;
+        }
+    };
+
+//Added 9
+    template< class Fac1 = double , class Fac2 = Fac1 , class Fac3 = Fac2 , class Fac4 = Fac3 ,
+            class Fac5 = Fac4 , class Fac6 = Fac5 , class Fac7 = Fac6 , class Fac8 = Fac7 , class Fac9 = Fac8 >
+    struct scale_sum9
+    {
+        const Fac1 m_alpha1;
+        const Fac2 m_alpha2;
+        const Fac3 m_alpha3;
+        const Fac4 m_alpha4;
+        const Fac5 m_alpha5;
+        const Fac6 m_alpha6;
+        const Fac7 m_alpha7;
+	const Fac8 m_alpha8;
+	const Fac9 m_alpha9;
+
+        scale_sum9( const Fac1 alpha1 , const Fac2 alpha2 , const Fac3 alpha3 ,
+                const Fac4 alpha4 , const Fac5 alpha5 , const Fac6 alpha6 , const Fac7 alpha7 , const Fac8 alpha8 , 
+		const Fac9 alpha9 )
+        : m_alpha1( alpha1 ) , m_alpha2( alpha2 ) , m_alpha3( alpha3 ) ,
+          m_alpha4( alpha4 ) , m_alpha5( alpha5 ) , m_alpha6( alpha6 ) , m_alpha7( alpha7 ) , m_alpha8( alpha8 ) , 
+	  m_alpha9( alpha9 ) { }
+
+        template< class Tuple >
+        __host__ __device__
+        void operator()( Tuple t ) const
+        {
+            thrust::get<0>(t) = m_alpha1 * thrust::get<1>(t) +
+                    m_alpha2 * thrust::get<2>(t) +
+                    m_alpha3 * thrust::get<3>(t) +
+                    m_alpha4 * thrust::get<4>(t) +
+                    m_alpha5 * thrust::get<5>(t) +
+                    m_alpha6 * thrust::get<6>(t) +
+                    m_alpha7 * thrust::get<7>(t) +
+		    m_alpha8 * thrust::get<8>(t) +
+		    m_alpha9 * thrust::get<9>(t) ;
+        }
+    };
+
+//Added 10
+    template< class Fac1 = double , class Fac2 = Fac1 , class Fac3 = Fac2 , class Fac4 = Fac3 ,
+            class Fac5 = Fac4 , class Fac6 = Fac5 , class Fac7 = Fac6 , class Fac8 = Fac7 , class Fac9 = Fac8 ,
+            class Fac10 = Fac9 >
+    struct scale_sum10
+    {
+        const Fac1 m_alpha1;
+        const Fac2 m_alpha2;
+        const Fac3 m_alpha3;
+        const Fac4 m_alpha4;
+        const Fac5 m_alpha5;
+        const Fac6 m_alpha6;
+        const Fac7 m_alpha7;
+	const Fac8 m_alpha8;
+	const Fac9 m_alpha9;
+	const Fac10 m_alpha10;
+
+        scale_sum10( const Fac1 alpha1 , const Fac2 alpha2 , const Fac3 alpha3 ,
+                const Fac4 alpha4 , const Fac5 alpha5 , const Fac6 alpha6 , const Fac7 alpha7 , const Fac8 alpha8 , 
+		const Fac9 alpha9 , const Fac10 alpha10 )
+        : m_alpha1( alpha1 ) , m_alpha2( alpha2 ) , m_alpha3( alpha3 ) ,
+          m_alpha4( alpha4 ) , m_alpha5( alpha5 ) , m_alpha6( alpha6 ) , m_alpha7( alpha7 ) , m_alpha8( alpha8 ) , 
+	  m_alpha9( alpha9 ) , m_alpha10( alpha10 ) { }
+
+        template< class Tuple >
+        __host__ __device__
+        void operator()( Tuple t ) const
+        {
+            thrust::get<0>(t) = m_alpha1 * thrust::get<1>(t) +
+                    m_alpha2 * thrust::get<2>(t) +
+                    m_alpha3 * thrust::get<3>(t) +
+                    m_alpha4 * thrust::get<4>(t) +
+                    m_alpha5 * thrust::get<5>(t) +
+                    m_alpha6 * thrust::get<6>(t) +
+                    m_alpha7 * thrust::get<7>(t) +
+		    m_alpha8 * thrust::get<8>(t) +
+		    m_alpha9 * thrust::get<9>(t) +
+                    m_alpha10 * thrust::get<10>(t) ;
+        }
+    };
+
+//Added 11
+    template< class Fac1 = double , class Fac2 = Fac1 , class Fac3 = Fac2 , class Fac4 = Fac3 ,
+            class Fac5 = Fac4 , class Fac6 = Fac5 , class Fac7 = Fac6 , class Fac8 = Fac7 , class Fac9 = Fac8 ,
+            class Fac10 = Fac9 , class Fac11 = Fac10 >
+    struct scale_sum11
+    {
+        const Fac1 m_alpha1;
+        const Fac2 m_alpha2;
+        const Fac3 m_alpha3;
+        const Fac4 m_alpha4;
+        const Fac5 m_alpha5;
+        const Fac6 m_alpha6;
+        const Fac7 m_alpha7;
+	const Fac8 m_alpha8;
+	const Fac9 m_alpha9;
+	const Fac10 m_alpha10;
+	const Fac11 m_alpha11;
+
+        scale_sum11( const Fac1 alpha1 , const Fac2 alpha2 , const Fac3 alpha3 ,
+                const Fac4 alpha4 , const Fac5 alpha5 , const Fac6 alpha6 , const Fac7 alpha7 , const Fac8 alpha8 , 
+		const Fac9 alpha9 , const Fac10 alpha10 , const Fac11 alpha11 )
+        : m_alpha1( alpha1 ) , m_alpha2( alpha2 ) , m_alpha3( alpha3 ) ,
+          m_alpha4( alpha4 ) , m_alpha5( alpha5 ) , m_alpha6( alpha6 ) , m_alpha7( alpha7 ) , m_alpha8( alpha8 ) , 
+	  m_alpha9( alpha9 ) , m_alpha10( alpha10 ) , m_alpha11( alpha11 ) { }
+
+        template< class Tuple >
+        __host__ __device__
+        void operator()( Tuple t ) const
+        {
+            thrust::get<0>(t) = m_alpha1 * thrust::get<1>(t) +
+                    m_alpha2 * thrust::get<2>(t) +
+                    m_alpha3 * thrust::get<3>(t) +
+                    m_alpha4 * thrust::get<4>(t) +
+                    m_alpha5 * thrust::get<5>(t) +
+                    m_alpha6 * thrust::get<6>(t) +
+                    m_alpha7 * thrust::get<7>(t) +
+		    m_alpha8 * thrust::get<8>(t) +
+		    m_alpha9 * thrust::get<9>(t) +
+                    m_alpha10 * thrust::get<10>(t) +
+                    m_alpha11 * thrust::get<11>(t) ;
+        }
+    };
+
+//Added 12
+    template< class Fac1 = double , class Fac2 = Fac1 , class Fac3 = Fac2 , class Fac4 = Fac3 ,
+            class Fac5 = Fac4 , class Fac6 = Fac5 , class Fac7 = Fac6 , class Fac8 = Fac7 , class Fac9 = Fac8 ,
+            class Fac10 = Fac9 , class Fac11 = Fac10 , class Fac12 = Fac11 >
+    struct scale_sum12
+    {
+        const Fac1 m_alpha1;
+        const Fac2 m_alpha2;
+        const Fac3 m_alpha3;
+        const Fac4 m_alpha4;
+        const Fac5 m_alpha5;
+        const Fac6 m_alpha6;
+        const Fac7 m_alpha7;
+	const Fac8 m_alpha8;
+	const Fac9 m_alpha9;
+	const Fac10 m_alpha10;
+	const Fac11 m_alpha11;
+	const Fac12 m_alpha12;
+
+        scale_sum12( const Fac1 alpha1 , const Fac2 alpha2 , const Fac3 alpha3 ,
+                const Fac4 alpha4 , const Fac5 alpha5 , const Fac6 alpha6 , const Fac7 alpha7 , const Fac8 alpha8 , 
+		const Fac9 alpha9 , const Fac10 alpha10 , const Fac11 alpha11 , const Fac12 alpha12 )
+        : m_alpha1( alpha1 ) , m_alpha2( alpha2 ) , m_alpha3( alpha3 ) ,
+          m_alpha4( alpha4 ) , m_alpha5( alpha5 ) , m_alpha6( alpha6 ) , m_alpha7( alpha7 ) , m_alpha8( alpha8 ) , 
+	  m_alpha9( alpha9 ) , m_alpha10( alpha10 ) , m_alpha11( alpha11 ) , m_alpha12( alpha12 ) { }
+
+        template< class Tuple >
+        __host__ __device__
+        void operator()( Tuple t ) const
+        {
+            thrust::get<0>(t) = m_alpha1 * thrust::get<1>(t) +
+                    m_alpha2 * thrust::get<2>(t) +
+                    m_alpha3 * thrust::get<3>(t) +
+                    m_alpha4 * thrust::get<4>(t) +
+                    m_alpha5 * thrust::get<5>(t) +
+                    m_alpha6 * thrust::get<6>(t) +
+                    m_alpha7 * thrust::get<7>(t) +
+		    m_alpha8 * thrust::get<8>(t) +
+		    m_alpha9 * thrust::get<9>(t) +
+                    m_alpha10 * thrust::get<10>(t) +
+                    m_alpha11 * thrust::get<11>(t) +
+                    m_alpha12 * thrust::get<12>(t) ;
+        }
+    };
+
+//Added 13
+    template< class Fac1 = double , class Fac2 = Fac1 , class Fac3 = Fac2 , class Fac4 = Fac3 ,
+            class Fac5 = Fac4 , class Fac6 = Fac5 , class Fac7 = Fac6 , class Fac8 = Fac7 , class Fac9 = Fac8 ,
+            class Fac10 = Fac9 , class Fac11 = Fac10 , class Fac12 = Fac11 , class Fac13 = Fac12 >
+    struct scale_sum13
+    {
+        const Fac1 m_alpha1;
+        const Fac2 m_alpha2;
+        const Fac3 m_alpha3;
+        const Fac4 m_alpha4;
+        const Fac5 m_alpha5;
+        const Fac6 m_alpha6;
+        const Fac7 m_alpha7;
+	const Fac8 m_alpha8;
+	const Fac9 m_alpha9;
+	const Fac10 m_alpha10;
+	const Fac11 m_alpha11;
+	const Fac12 m_alpha12;
+	const Fac13 m_alpha13;
+
+        scale_sum13( const Fac1 alpha1 , const Fac2 alpha2 , const Fac3 alpha3 ,
+                const Fac4 alpha4 , const Fac5 alpha5 , const Fac6 alpha6 , const Fac7 alpha7 , const Fac8 alpha8 , 
+		const Fac9 alpha9 , const Fac10 alpha10 , const Fac11 alpha11 , const Fac12 alpha12 , const Fac13 alpha13 )
+        : m_alpha1( alpha1 ) , m_alpha2( alpha2 ) , m_alpha3( alpha3 ) ,
+          m_alpha4( alpha4 ) , m_alpha5( alpha5 ) , m_alpha6( alpha6 ) , m_alpha7( alpha7 ) , m_alpha8( alpha8 ) , 
+	  m_alpha9( alpha9 ) , m_alpha10( alpha10 ) , m_alpha11( alpha11 ) , m_alpha12( alpha12 ) , m_alpha13( alpha13 ) { }
+
+        template< class Tuple >
+        __host__ __device__
+        void operator()( Tuple t ) const
+        {
+            thrust::get<0>(t) = m_alpha1 * thrust::get<1>(t) +
+                    m_alpha2 * thrust::get<2>(t) +
+                    m_alpha3 * thrust::get<3>(t) +
+                    m_alpha4 * thrust::get<4>(t) +
+                    m_alpha5 * thrust::get<5>(t) +
+                    m_alpha6 * thrust::get<6>(t) +
+                    m_alpha7 * thrust::get<7>(t) +
+		    m_alpha8 * thrust::get<8>(t) +
+		    m_alpha9 * thrust::get<9>(t) +
+                    m_alpha10 * thrust::get<10>(t) +
+                    m_alpha11 * thrust::get<11>(t) +
+                    m_alpha12 * thrust::get<12>(t) +
+                    m_alpha13 * thrust::get<13>(t) ;
+        }
+    };
 
     template< class Fac1 = double >
     struct rel_error
