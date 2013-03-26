@@ -282,7 +282,7 @@ struct thrust_algebra
     class StateType9 , class TupleType10 , class Operation >
     static void for_each12( StateType1 &s1 , StateType2 &s2 , StateType3 &s3 , StateType4 &s4 ,
             StateType5 &s5 , StateType6 &s6 , StateType7 &s7 , StateType8 &s8 , 
-            StateType9 &s9 , class TupleType10 , Operation op )
+            StateType9 &s9 , TupleType10 , Operation op )
     {
         thrust::for_each(
                 thrust::make_zip_iterator( thrust::make_tuple( boost::begin(s1) ,
@@ -320,7 +320,7 @@ struct thrust_algebra
     class StateType9 , class TupleType10 , class Operation >
     static void for_each13( StateType1 &s1 , StateType2 &s2 , StateType3 &s3 , StateType4 &s4 ,
             StateType5 &s5 , StateType6 &s6 , StateType7 &s7 , StateType8 &s8 , 
-            StateType9 &s9 , class TupleType10 , Operation op )
+            StateType9 &s9 , TupleType10 , Operation op )
     {
         thrust::for_each(
                 thrust::make_zip_iterator( thrust::make_tuple( boost::begin(s1) ,
@@ -360,7 +360,7 @@ struct thrust_algebra
     class StateType9 , class TupleType10 , class Operation >
     static void for_each14( StateType1 &s1 , StateType2 &s2 , StateType3 &s3 , StateType4 &s4 ,
             StateType5 &s5 , StateType6 &s6 , StateType7 &s7 , StateType8 &s8 , 
-            StateType9 &s9 , class TupleType10 , Operation op )
+            StateType9 &s9 , TupleType10 , Operation op )
     {
         thrust::for_each(
                 thrust::make_zip_iterator( thrust::make_tuple( boost::begin(s1) ,
