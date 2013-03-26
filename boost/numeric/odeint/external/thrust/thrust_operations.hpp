@@ -266,7 +266,7 @@ struct thrust_operations
                     m_alpha6 * thrust::get<6>(t) +
                     m_alpha7 * thrust::get<7>(t) +
                     m_alpha8 * thrust::get<8>(t) +
-                    m_alpha9 * thrust::get<9>(t) ; //maybe m_alpha9 * thrust::get<9,1>(t);
+                    m_alpha9 * thrust::get<9,1>(t);
         }
     };
 
@@ -306,8 +306,8 @@ struct thrust_operations
                     m_alpha6 * thrust::get<6>(t) +
                     m_alpha7 * thrust::get<7>(t) +
                     m_alpha8 * thrust::get<8>(t) +
-                    m_alpha9 * thrust::get<9>(t) +
-                    m_alpha10 * thrust::get<10>(t) ;
+                    m_alpha9 * thrust::get<9,1>(t) +
+                    m_alpha10 * thrust::get<9,2>(t) ;
         }
     };
 
@@ -348,9 +348,9 @@ struct thrust_operations
                     m_alpha6 * thrust::get<6>(t) +
                     m_alpha7 * thrust::get<7>(t) +
                     m_alpha8 * thrust::get<8>(t) +
-                    m_alpha9 * thrust::get<9>(t) +
-                    m_alpha10 * thrust::get<10>(t) +
-                    m_alpha11 * thrust::get<11>(t) ;
+                    m_alpha9 * thrust::get<9,1>(t) +
+                    m_alpha10 * thrust::get<9,2>(t) +
+                    m_alpha11 * thrust::get<9,3>(t) ;
         }
     };
 
@@ -392,10 +392,10 @@ struct thrust_operations
                     m_alpha6 * thrust::get<6>(t) +
                     m_alpha7 * thrust::get<7>(t) +
                     m_alpha8 * thrust::get<8>(t) +
-                    m_alpha9 * thrust::get<9>(t) +
-                    m_alpha10 * thrust::get<10>(t) +
-                    m_alpha11 * thrust::get<11>(t) +
-                    m_alpha12 * thrust::get<12>(t) ;
+                    m_alpha9 * thrust::get<9,1>(t) +
+                    m_alpha10 * thrust::get<9,2>(t) +
+                    m_alpha11 * thrust::get<9,3>(t) +
+                    m_alpha12 * thrust::get<9,4>(t) ;
         }
     };
 
@@ -438,11 +438,11 @@ struct thrust_operations
                     m_alpha6 * thrust::get<6>(t) +
                     m_alpha7 * thrust::get<7>(t) +
                     m_alpha8 * thrust::get<8>(t) +
-                    m_alpha9 * thrust::get<9>(t) +
-                    m_alpha10 * thrust::get<10>(t) +
-                    m_alpha11 * thrust::get<11>(t) +
-                    m_alpha12 * thrust::get<12>(t) +
-                    m_alpha13 * thrust::get<13>(t) ;
+                    m_alpha9 * thrust::get<9,1>(t) +
+                    m_alpha10 * thrust::get<9,2>(t) +
+                    m_alpha11 * thrust::get<9,3>(t) +
+                    m_alpha12 * thrust::get<9,4>(t) +
+                    m_alpha13 * thrust::get<9,5>(t) ;
         }
     };
 
