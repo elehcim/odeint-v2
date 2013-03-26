@@ -193,7 +193,7 @@ struct thrust_algebra
                         boost::begin(s6) ,
                         boost::begin(s7) ,
                         boost::begin(s8) ,
-                        thrust::make_tuple(boost::begin(s9) ) ) ) ,
+                        boost::begin(s9) ) ) ,
                 thrust::make_zip_iterator( thrust::make_tuple( boost::end(s1) ,
                         boost::end(s2) ,
                         boost::end(s3) ,
@@ -202,7 +202,7 @@ struct thrust_algebra
                         boost::end(s6) ,
                         boost::end(s7) ,
                         boost::end(s8) ,
-                        thrust::make_tuple(boost::end(s9) ) ) ) ,
+                        boost::end(s9) ) ) ,
                 op);
     }
 
@@ -224,7 +224,8 @@ struct thrust_algebra
                         boost::begin(s7) ,
                         boost::begin(s8) ,
                         boost::begin(s9) ,
-                        boost::begin(s10) ) ) ,
+                    thrust::make_tuple(
+                        boost::begin(s10) ) ) ),
                 thrust::make_zip_iterator( thrust::make_tuple( boost::end(s1) ,
                         boost::end(s2) ,
                         boost::end(s3) ,
@@ -234,7 +235,8 @@ struct thrust_algebra
                         boost::end(s7) ,
                         boost::end(s8) ,
                         boost::end(s9) ,
-                        boost::end(s10) ) ) ,
+                    thrust::make_tuple(
+                        boost::end(s10) ) ) ) ,
                 op);
     }
 
@@ -256,7 +258,8 @@ struct thrust_algebra
                         boost::begin(s7) ,
                         boost::begin(s8) ,
                         boost::begin(s9) ,
-                        boost::begin(s10) ,
+                    thrust::make_tuple(
+                        boost::begin(s10) ),
                         boost::begin(s11) ) ) ,
                 thrust::make_zip_iterator( thrust::make_tuple( boost::end(s1) ,
                         boost::end(s2) ,
@@ -267,8 +270,9 @@ struct thrust_algebra
                         boost::end(s7) ,
                         boost::end(s8) ,
                         boost::end(s9) ,
+                    thrust::make_tuple(
                         boost::end(s10) ,
-                        boost::end(s11) ) ) ,
+                        boost::end(s11) ) ) ) ,
                 op);
     }
 
@@ -290,9 +294,10 @@ struct thrust_algebra
                         boost::begin(s7) ,
                         boost::begin(s8) ,
                         boost::begin(s9) ,
+                    thrust::make_tuple(
                         boost::begin(s10) ,
                         boost::begin(s11) ,
-                        boost::begin(s12) ) ) ,
+                        boost::begin(s12) ) ) ),
                 thrust::make_zip_iterator( thrust::make_tuple( boost::end(s1) ,
                         boost::end(s2) ,
                         boost::end(s3) ,
@@ -302,9 +307,10 @@ struct thrust_algebra
                         boost::end(s7) ,
                         boost::end(s8) ,
                         boost::end(s9) ,
+                    thrust::make_tuple(
                         boost::end(s10) ,
                         boost::end(s11) ,
-                        boost::end(s12) ) ) ,
+                        boost::end(s12) ) ) ),
                 op);
     }
 
@@ -326,10 +332,11 @@ struct thrust_algebra
                         boost::begin(s7) ,
                         boost::begin(s8) ,
                         boost::begin(s9) ,
+                    thrust::make_tuple(
                         boost::begin(s10) ,
                         boost::begin(s11) ,
                         boost::begin(s12) ,
-                        boost::begin(s13) ) ) ,
+                        boost::begin(s13) ) ) ),
                 thrust::make_zip_iterator( thrust::make_tuple( boost::end(s1) ,
                         boost::end(s2) ,
                         boost::end(s3) ,
@@ -339,10 +346,11 @@ struct thrust_algebra
                         boost::end(s7) ,
                         boost::end(s8) ,
                         boost::end(s9) ,
+                    thrust::make_tuple(
                         boost::end(s10) ,
                         boost::end(s11) ,
                         boost::end(s12) ,
-                        boost::end(s13) ) ) ,
+                        boost::end(s13) ) ) ),
                 op);
     }
 
@@ -364,11 +372,12 @@ struct thrust_algebra
                         boost::begin(s7) ,
                         boost::begin(s8) ,
                         boost::begin(s9) ,
+                    thrust::make_tuple(
                         boost::begin(s10) ,
                         boost::begin(s11) ,
                         boost::begin(s12) ,
                         boost::begin(s13) ,
-                        boost::begin(s14) ) ) ,
+                        boost::begin(s14) ) ) ),
                 thrust::make_zip_iterator( thrust::make_tuple( boost::end(s1) ,
                         boost::end(s2) ,
                         boost::end(s3) ,
@@ -378,11 +387,12 @@ struct thrust_algebra
                         boost::end(s7) ,
                         boost::end(s8) ,
                         boost::end(s9) ,
+                    thrust::make_tuple(
                         boost::end(s10) ,
                         boost::end(s11) ,
                         boost::end(s12) ,
                         boost::end(s13) ,
-                        boost::end(s14) ) ) ,
+                        boost::end(s14) ) ) ),
                 op);
     }
 
