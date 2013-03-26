@@ -193,7 +193,7 @@ struct thrust_algebra
                         boost::begin(s6) ,
                         boost::begin(s7) ,
                         boost::begin(s8) ,
-                        boost::begin(s9) ) ) ,
+                        thrust::make_tuple(boost::begin(s9) ) ) ) ,
                 thrust::make_zip_iterator( thrust::make_tuple( boost::end(s1) ,
                         boost::end(s2) ,
                         boost::end(s3) ,
@@ -202,11 +202,11 @@ struct thrust_algebra
                         boost::end(s6) ,
                         boost::end(s7) ,
                         boost::end(s8) ,
-                        boost::end(s9) ) ) ,
+                        thrust::make_tuple(boost::end(s9) ) ) ) ,
                 op);
     }
 
-//Added 10
+//Added 10 - FIXME
     template< class StateType1 , class StateType2 , class StateType3 , class StateType4 ,
     class StateType5 , class StateType6 , class StateType7 , class StateType8 , 
     class StateType9 , class StateType10 , class Operation >
@@ -238,7 +238,7 @@ struct thrust_algebra
                 op);
     }
 
-//Added 11
+//Added 11 - FIXME
     template< class StateType1 , class StateType2 , class StateType3 , class StateType4 ,
     class StateType5 , class StateType6 , class StateType7 , class StateType8 , 
     class StateType9 , class StateType10 , class StateType11 , class Operation >
@@ -272,7 +272,7 @@ struct thrust_algebra
                 op);
     }
 
-//Added 12
+//Added 12 - FIXME
     template< class StateType1 , class StateType2 , class StateType3 , class StateType4 ,
     class StateType5 , class StateType6 , class StateType7 , class StateType8 , 
     class StateType9 , class StateType10 , class StateType11 , class StateType12 , class Operation >
@@ -308,7 +308,7 @@ struct thrust_algebra
                 op);
     }
 
-//Added 13
+//Added 13 - FIXME
     template< class StateType1 , class StateType2 , class StateType3 , class StateType4 ,
     class StateType5 , class StateType6 , class StateType7 , class StateType8 , 
     class StateType9 , class StateType10 , class StateType11 , class StateType12 , class StateType13 , class Operation >
@@ -346,7 +346,7 @@ struct thrust_algebra
                 op);
     }
 
-//Added 14
+//Added 14 - FIXME
     template< class StateType1 , class StateType2 , class StateType3 , class StateType4 ,
     class StateType5 , class StateType6 , class StateType7 , class StateType8 , 
     class StateType9 , class StateType10 , class StateType11 , class StateType12 , class StateType13 , class StateType14 , class Operation >

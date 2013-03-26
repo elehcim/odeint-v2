@@ -232,7 +232,7 @@ struct thrust_operations
         }
     };
 
-//Added 9
+//Added 9 - FIXME
     template< class Fac1 = double , class Fac2 = Fac1 , class Fac3 = Fac2 , class Fac4 = Fac3 ,
             class Fac5 = Fac4 , class Fac6 = Fac5 , class Fac7 = Fac6 , class Fac8 = Fac7 , class Fac9 = Fac8 >
     struct scale_sum9
@@ -266,7 +266,7 @@ struct thrust_operations
                     m_alpha6 * thrust::get<6>(t) +
                     m_alpha7 * thrust::get<7>(t) +
                     m_alpha8 * thrust::get<8>(t) +
-                    m_alpha9 * thrust::get<9>(t) ;
+                    m_alpha9 * thrust::get<9>(t) ; //maybe m_alpha9 * thrust::get<9,1>(t);
         }
     };
 
