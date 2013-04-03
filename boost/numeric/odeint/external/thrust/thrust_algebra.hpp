@@ -206,7 +206,7 @@ struct thrust_algebra
                 op);
     }
 
-//Added 10 - FIXME
+//Added 10
     template< class StateType1 , class StateType2 , class StateType3 , class StateType4 ,
     class StateType5 , class StateType6 , class StateType7 , class StateType8 , 
     class StateType9 , class StateType10 , class Operation >
@@ -238,13 +238,13 @@ struct thrust_algebra
                 op);
     }
 
-//Added 11 - FIXME
+//Added 11
     template< class StateType1 , class StateType2 , class StateType3 , class StateType4 ,
     class StateType5 , class StateType6 , class StateType7 , class StateType8 , 
-    class StateType9 , class StateType10 , class Operation >
+    class StateType9 , class StateType10 , class StateType11 , class Operation >
     static void for_each11( StateType1 &s1 , StateType2 &s2 , StateType3 &s3 , StateType4 &s4 ,
             StateType5 &s5 , StateType6 &s6 , StateType7 &s7 , StateType8 &s8 , 
-            StateType9 &s9 , StateType10 &s10 , Operation op )
+            StateType9 &s9 , StateType10 &s10 , StateType11 &s11 , Operation op )
     {
         thrust::for_each(
                 thrust::make_zip_iterator(
@@ -258,7 +258,8 @@ struct thrust_algebra
                         thrust::make_tuple(boost::begin(s7)) ,
                         thrust::make_tuple(boost::begin(s8)) ,
                         thrust::make_tuple(boost::begin(s9)) ,
-                        thrust::make_tuple(boost::begin(s10) , boost::begin(s11) ) ) ),
+                        thrust::make_tuple(boost::begin(s10) ,
+                            boost::begin(s11) ) ) ),
                 thrust::make_zip_iterator(
                     thrust::make_tuple(
                         thrust::make_tuple(boost::end(s1)) ,
@@ -270,127 +271,128 @@ struct thrust_algebra
                         thrust::make_tuple(boost::end(s7)) ,
                         thrust::make_tuple(boost::end(s8)) ,
                         thrust::make_tuple(boost::end(s9)) ,
-                        thrust::make_tuple(boost::end(s10) , boost::end(s11) ) ) ),
+                        thrust::make_tuple(boost::end(s10) ,
+                            boost::end(s11) ) ) ),
                 op);
     }
 
-//Added 12 - FIXME
+//Added 12
     template< class StateType1 , class StateType2 , class StateType3 , class StateType4 ,
     class StateType5 , class StateType6 , class StateType7 , class StateType8 , 
-    class StateType9 , class TupleType10 , class Operation >
+    class StateType9 , class StateType10 , class StateType11 , class StateType12 , class Operation >
     static void for_each12( StateType1 &s1 , StateType2 &s2 , StateType3 &s3 , StateType4 &s4 ,
             StateType5 &s5 , StateType6 &s6 , StateType7 &s7 , StateType8 &s8 , 
-            StateType9 &s9 , TupleType10 , Operation op )
+            StateType9 &s9 , StateType10 &s10 , StateType11 &s11 , StateType12 &s12 , Operation op )
     {
         thrust::for_each(
-                thrust::make_zip_iterator( thrust::make_tuple( boost::begin(s1) ,
-                        boost::begin(s2) ,
-                        boost::begin(s3) ,
-                        boost::begin(s4) ,
-                        boost::begin(s5) ,
-                        boost::begin(s6) ,
-                        boost::begin(s7) ,
-                        boost::begin(s8) ,
-                        boost::begin(s9) ,
+                thrust::make_zip_iterator(
                     thrust::make_tuple(
-                        boost::begin(s10) ,
-                        boost::begin(s11) ,
-                        boost::begin(s12) ) ) ),
-                thrust::make_zip_iterator( thrust::make_tuple( boost::end(s1) ,
-                        boost::end(s2) ,
-                        boost::end(s3) ,
-                        boost::end(s4) ,
-                        boost::end(s5) ,
-                        boost::end(s6) ,
-                        boost::end(s7) ,
-                        boost::end(s8) ,
-                        boost::end(s9) ,
+                        thrust::make_tuple(boost::begin(s1)) ,
+                        thrust::make_tuple(boost::begin(s2)) ,
+                        thrust::make_tuple(boost::begin(s3)) ,
+                        thrust::make_tuple(boost::begin(s4)) ,
+                        thrust::make_tuple(boost::begin(s5)) ,
+                        thrust::make_tuple(boost::begin(s6)) ,
+                        thrust::make_tuple(boost::begin(s7)) ,
+                        thrust::make_tuple(boost::begin(s8)),
+                        thrust::make_tuple(boost::begin(s9)) ,
+                        thrust::make_tuple(boost::begin(s10) ,
+                            boost::begin(s11) , boost::begin(s12) ) ) ),
+                thrust::make_zip_iterator(
                     thrust::make_tuple(
-                        boost::end(s10) ,
-                        boost::end(s11) ,
-                        boost::end(s12) ) ) ),
+                        thrust::make_tuple(boost::end(s1)) ,
+                        thrust::make_tuple(boost::end(s2)) ,
+                        thrust::make_tuple(boost::end(s3)) ,
+                        thrust::make_tuple(boost::end(s4)) ,
+                        thrust::make_tuple(boost::end(s5)) ,
+                        thrust::make_tuple(boost::end(s6)) ,
+                        thrust::make_tuple(boost::end(s7)) ,
+                        thrust::make_tuple(boost::end(s8)) ,
+                        thrust::make_tuple(boost::end(s9)) ,
+                        thrust::make_tuple(boost::end(s10) ,
+                            boost::end(s11) , boost::end(s12) ) ) ),
                 op);
     }
 
-//Added 13 - FIXME
+//Added 13
     template< class StateType1 , class StateType2 , class StateType3 , class StateType4 ,
     class StateType5 , class StateType6 , class StateType7 , class StateType8 , 
-    class StateType9 , class TupleType10 , class Operation >
+    class StateType9 , class StateType10 , class StateType11 , class StateType12 , 
+    class StateType13 , class Operation >
     static void for_each13( StateType1 &s1 , StateType2 &s2 , StateType3 &s3 , StateType4 &s4 ,
             StateType5 &s5 , StateType6 &s6 , StateType7 &s7 , StateType8 &s8 , 
-            StateType9 &s9 , TupleType10 , Operation op )
+            StateType9 &s9 , StateType10 &s10 , StateType11 &s11 , StateType12 &s12 ,
+            StateType13 &s13 , Operation op )
     {
         thrust::for_each(
-                thrust::make_zip_iterator( thrust::make_tuple( boost::begin(s1) ,
-                        boost::begin(s2) ,
-                        boost::begin(s3) ,
-                        boost::begin(s4) ,
-                        boost::begin(s5) ,
-                        boost::begin(s6) ,
-                        boost::begin(s7) ,
-                        boost::begin(s8) ,
-                        boost::begin(s9) ,
+                thrust::make_zip_iterator(
                     thrust::make_tuple(
-                        boost::begin(s10) ,
-                        boost::begin(s11) ,
-                        boost::begin(s12) ,
-                        boost::begin(s13) ) ) ),
-                thrust::make_zip_iterator( thrust::make_tuple( boost::end(s1) ,
-                        boost::end(s2) ,
-                        boost::end(s3) ,
-                        boost::end(s4) ,
-                        boost::end(s5) ,
-                        boost::end(s6) ,
-                        boost::end(s7) ,
-                        boost::end(s8) ,
-                        boost::end(s9) ,
+                        thrust::make_tuple(boost::begin(s1)) ,
+                        thrust::make_tuple(boost::begin(s2)) ,
+                        thrust::make_tuple(boost::begin(s3)) ,
+                        thrust::make_tuple(boost::begin(s4)) ,
+                        thrust::make_tuple(boost::begin(s5)) ,
+                        thrust::make_tuple(boost::begin(s6)) ,
+                        thrust::make_tuple(boost::begin(s7)) ,
+                        thrust::make_tuple(boost::begin(s8)) ,
+                        thrust::make_tuple(boost::begin(s9)) ,
+                        thrust::make_tuple(boost::begin(s10) ,
+                            boost::begin(s11) , boost::begin(s12) , boost::begin(s13) ) ) ),
+                thrust::make_zip_iterator(
                     thrust::make_tuple(
-                        boost::end(s10) ,
-                        boost::end(s11) ,
-                        boost::end(s12) ,
-                        boost::end(s13) ) ) ),
+                        thrust::make_tuple(boost::end(s1)) ,
+                        thrust::make_tuple(boost::end(s2)) ,
+                        thrust::make_tuple(boost::end(s3)) ,
+                        thrust::make_tuple(boost::end(s4)) ,
+                        thrust::make_tuple(boost::end(s5)) ,
+                        thrust::make_tuple(boost::end(s6)) ,
+                        thrust::make_tuple(boost::end(s7)) ,
+                        thrust::make_tuple(boost::end(s8)) ,
+                        thrust::make_tuple(boost::end(s9)) ,
+                        thrust::make_tuple(boost::end(s10) , 
+                            boost::end(s11) , boost::end(s12) , boost::end(s13) ) ) ),
                 op);
     }
 
-//Added 14 - FIXME
+//Added 14
     template< class StateType1 , class StateType2 , class StateType3 , class StateType4 ,
     class StateType5 , class StateType6 , class StateType7 , class StateType8 , 
-    class StateType9 , class TupleType10 , class Operation >
+    class StateType9 , class StateType10 , class StateType11 , class StateType12 ,
+    class StateType13 , class StateType14 , class Operation >
     static void for_each14( StateType1 &s1 , StateType2 &s2 , StateType3 &s3 , StateType4 &s4 ,
             StateType5 &s5 , StateType6 &s6 , StateType7 &s7 , StateType8 &s8 , 
-            StateType9 &s9 , TupleType10 , Operation op )
+            StateType9 &s9 , StateType10 &s10 , StateType11 &s11 , StateType12 &s12 ,
+            StateType13 &s13 , StateType14 &s14 , Operation op )
     {
         thrust::for_each(
-                thrust::make_zip_iterator( thrust::make_tuple( boost::begin(s1) ,
-                        boost::begin(s2) ,
-                        boost::begin(s3) ,
-                        boost::begin(s4) ,
-                        boost::begin(s5) ,
-                        boost::begin(s6) ,
-                        boost::begin(s7) ,
-                        boost::begin(s8) ,
-                        boost::begin(s9) ,
+                thrust::make_zip_iterator(
                     thrust::make_tuple(
-                        boost::begin(s10) ,
-                        boost::begin(s11) ,
-                        boost::begin(s12) ,
-                        boost::begin(s13) ,
-                        boost::begin(s14) ) ) ),
-                thrust::make_zip_iterator( thrust::make_tuple( boost::end(s1) ,
-                        boost::end(s2) ,
-                        boost::end(s3) ,
-                        boost::end(s4) ,
-                        boost::end(s5) ,
-                        boost::end(s6) ,
-                        boost::end(s7) ,
-                        boost::end(s8) ,
-                        boost::end(s9) ,
+                        thrust::make_tuple(boost::begin(s1)) ,
+                        thrust::make_tuple(boost::begin(s2)) ,
+                        thrust::make_tuple(boost::begin(s3)) ,
+                        thrust::make_tuple(boost::begin(s4)) ,
+                        thrust::make_tuple(boost::begin(s5)) ,
+                        thrust::make_tuple(boost::begin(s6)) ,
+                        thrust::make_tuple(boost::begin(s7)) ,
+                        thrust::make_tuple(boost::begin(s8)) ,
+                        thrust::make_tuple(boost::begin(s9)) ,
+                        thrust::make_tuple(boost::begin(s10) , 
+                            boost::begin(s11) , boost::begin(s12) , boost::begin(s13) ,
+                            boost::begin(s14) ) ) ),
+                thrust::make_zip_iterator(
                     thrust::make_tuple(
-                        boost::end(s10) ,
-                        boost::end(s11) ,
-                        boost::end(s12) ,
-                        boost::end(s13) ,
-                        boost::end(s14) ) ) ),
+                        thrust::make_tuple(boost::end(s1)) ,
+                        thrust::make_tuple(boost::end(s2)) ,
+                        thrust::make_tuple(boost::end(s3)) ,
+                        thrust::make_tuple(boost::end(s4)) ,
+                        thrust::make_tuple(boost::end(s5)) ,
+                        thrust::make_tuple(boost::end(s6)) ,
+                        thrust::make_tuple(boost::end(s7)) ,
+                        thrust::make_tuple(boost::end(s8)) ,
+                        thrust::make_tuple(boost::end(s9)) ,
+                        thrust::make_tuple(boost::end(s10) ,
+                            boost::begin(s11) , boost::begin(s12) , boost::begin(s13) ,
+                            boost::begin(s14) ) ) ),
                 op);
     }
 
