@@ -266,7 +266,7 @@ struct thrust_operations
                     m_alpha6 * thrust::get<6>(t) +
                     m_alpha7 * thrust::get<7>(t) +
                     m_alpha8 * thrust::get<8>(t) +
-                    m_alpha9 * thrust::get<9,1>(t);
+                    m_alpha9 * thrust::get<0>(thrust::get<9>(t));
         }
     };
 
